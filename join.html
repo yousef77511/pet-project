@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🦸‍♂️ Join Our Team</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🦸‍♂️ Join the Pet Hero Team! 🐾</h1>
+            <p>Become a certified Super Pet Caretaker!</p>
+            <nav>
+                <button class="nav-btn" onclick="window.location.href='index.html'">Home</button>
+                <button class="nav-btn" onclick="window.location.href='join.html'">Join Us</button>
+            </nav>
+        </header>
+
+        <div class="page active">
+            <h2>Hero Training Program</h2>
+            <div class="super-pet"></div>
+            
+            <form class="hero-form">
+                <label for="hero-name">Your Hero Name:</label>
+                <input type="text" id="hero-name" required>
+                
+                <label for="hero-power">Special Skill:</label>
+                <select id="hero-power">
+                    <option>Pet Whispering</option>
+                    <option>Treat Engineering</option>
+                    <option>Cuddle Mastery</option>
+                </select>
+                
+                <label>
+                    <input type="checkbox" required> 
+                    I pledge to protect all super pets!
+                </label>
+                
+                <button type="submit" class="btn">Submit Application</button>
+            </form>
+            
+            <div class="benefits">
+                <h3>🦸 Perks of Being a Pet Hero:</h3>
+                <ul>
+                    <li>Free cape and mask</li>
+                    <li>Access to secret pet training</li>
+                    <li>Monthly treat supply</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🐾 Super Pet Adoption League 🦸‍♂️</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐶</text></svg>">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🐾 Super Pet Adoption League 🦸‍♂️</h1>
+            <p>Find your perfect superhero sidekick from our extraordinary pets!</p>
+            <nav>
+                <button class="nav-btn" onclick="showPage('home')">Mission Brief</button>
+                <button class="nav-btn" onclick="showPage('pets')">Meet the Pets</button>
+                <button class="nav-btn" onclick="showPage('adopt')">Adoption Form</button>
+                <button class="nav-btn" onclick="showPage('error')">Emergency!</button>
+            </nav>
+        </header>
+        
+        <!-- Home Page -->
+        <div id="home" class="page active">
+            <h2>Operation: Find a Hero</h2>
+            <div class="super-pet fly"></div>
+            <p>Every superhero needs a trusty sidekick, and our shelter is full of pets with extraordinary abilities!</p>
+            <p>Your mission, should you choose to accept it:</p>
+            <ol>
+                <li>Browse our selection of super-powered pets 🐕‍🦺</li>
+                <li>Find your perfect crime-fighting companion 🦸‍♂️</li>
+                <li>Complete the adoption paperwork 📝</li>
+                <li>Begin your adventures together! 🚀</li>
+            </ol>
+            <button class="btn" onclick="alert('MISSION ACCEPTED! You are now officially a Pet Hero!')">Accept Mission</button>
+            <p><small>Warning: May involve excessive belly rubs and treat demands</small></p>
+        </div>
+        
+        <!-- Pets Page -->
+        <div id="pets" class="page">
+            <h2>Super Pets Available</h2>
+            <p>These extraordinary animals are looking for their forever heroes!</p>
+            
+            <div class="pet-grid">
+                <div class="pet-card" onclick="alert('ZOOM! Lightning the Dog can run at 60mph!')">
+                    <div class="pet-emoji">⚡🐕</div>
+                    <h3>Lightning the Dog</h3>
+                    <p>Super speed</p>
+                    <div class="badge">⚡</div>
+                </div>
+                <div class="pet-card" onclick="alert('INVISIBLE! Shadow the Cat can disappear at will!')">
+                    <div class="pet-emoji">👻🐈</div>
+                    <h3>Shadow the Cat</h3>
+                    <p>Invisibility</p>
+                    <div class="badge">👻</div>
+                </div>
+                <div class="pet-card" onclick="alert('STRONG! Titan the Turtle can lift 100x his weight!')">
+                    <div class="pet-emoji">💪🐢</div>
+                    <h3>Titan the Turtle</h3>
+                    <p>Super strength</p>
+                    <div class="badge">💪</div>
+                </div>
+                <div class="pet-card" onclick="alert('SMART! Professor Paws the Parrot knows 10 languages!')">
+                    <div class="pet-emoji">🧠🦜</div>
+                    <h3>Professor Paws</h3>
+                    <p>Genius intellect</p>
+                    <div class="badge">🧠</div>
+                </div>
+            </div>
+            
+            <audio id="petSound" src="https://www.soundjay.com/buttons/sounds/button-09.mp3" preload="auto"></audio>
+            <button class="btn" onclick="document.getElementById('petSound').play(); alert('EMERGENCY PET DEPLOYED! Captain Cuddles is on the way!')">Emergency Pet</button>
+        </div>
+        
+        <!-- Adopt Page -->
+        <div id="adopt" class="page">
+            <h2>Become a Pet Hero!</h2>
+            <p>Ready to adopt your super-powered companion? Fill out this form!</p>
+            
+            <div style="text-align: center; margin: 20px 0;">
+                <span style="font-size: 3rem;">🦸‍♂️</span>
+                <span style="font-size: 3rem;">➕</span>
+                <span style="font-size: 3rem;">🐕</span>
+                <span style="font-size: 3rem;">🟰</span>
+                <span style="font-size: 3rem;">💥</span>
+            </div>
+            
+            <form onsubmit="alert('Congratulations! Your application has been approved! Prepare for adventure!'); return false;">
+                <label for="name">Hero Name:</label>
+                <input type="text" id="name" placeholder="e.g. Captain Cuddles" required style="width: 100%; padding: 10px; margin: 10px 0; border: 2px solid #00b4ff; border-radius: 10px;">
+                
+                <label for="power">Your Superpower:</label>
+                <select id="power" style="width: 100%; padding: 10px; margin: 10px 0; border: 2px solid #00b4ff; border-radius: 10px;">
+                    <option>Flight</option>
+                    <option>Super Strength</option>
+                    <option>Invisibility</option>
+                    <option>Telekinesis</option>
+                    <option>Just Really Good at Pets</option>
+                </select>
+                
+                <label for="pet">Preferred Super Pet:</label>
+                <select id="pet" style="width: 100%; padding: 10px; margin: 10px 0; border: 2px solid #00b4ff; border-radius: 10px;">
+                    <option>Lightning the Dog</option>
+                    <option>Shadow the Cat</option>
+                    <option>Titan the Turtle</option>
+                    <option>Professor Paws</option>
+                    <option>Surprise Me!</option>
+                </select>
+                
+                <label>
+                    <input type="checkbox" required> I promise to provide unlimited treats and belly rubs
+                </label>
+                
+                <button type="submit" class="btn">Submit Application</button>
+            </form>
+            
+            <p>Or contact us:</p>
+            <p>📧 <a href="mailto:adoptions@superpets.hero" style="color: #007bb2;">adoptions@superpets.hero</a></p>
+            <p>📞 <a href="tel:+15551234567" style="color: #007bb2;">1-800-SUP-PETS</a></p>
+        </div>
+        
+        <!-- 404 Page -->
+        <div id="error" class="page">
+            <div class="error-page">
+                <h2>404: Pet Not Found</h2>
+                <div class="error-emoji">🦸‍♂️❌🐕</div>
+                <p>Oh no! This super pet is currently on a mission!</p>
+                <p>They must be saving the world from evil squirrels...</p>
+                <button class="btn" onclick="showPage('home')">Return to Safety</button>
+            </div>
+        </div>
+        
+        <footer>
+            <p>© 2025 Super Pet Adoption League | Secret Code: <strong>woofmeow</strong></p>
+            <p>All pets come with capes and heroic backstories</p>
+            <p><a href="https://github.com/yourusername/super-pet-adoption" target="_blank" style="color: #007bb2;">View our secret training manuals on GitHub</a></p>
+        </footer>
+    </div>
+    
+    <!-- Easter Egg Button -->
+    <button class="secret-btn" onclick="showEasterEgg()">🐾</button>
+    
+    <!-- Easter Egg Content -->
+    <div id="easterEgg" class="easter-egg">
+        <div class="super-dog">🐕‍🦺✨</div>
+        <h2>SECRET MISSION UNLOCKED!</h2>
+        <p>You've discovered the Legendary Super Dog program!</p>
+        <p>These elite canine heroes have been trained in advanced tail-wagging, squirrel surveillance, and emergency snack detection.</p>
+        <button class="btn" onclick="hideEasterEgg()">Return to Mission</button>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
